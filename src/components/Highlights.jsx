@@ -42,4 +42,4 @@ const Highlights = () => {
     );
 }
 
-export default Landing;
+export default Highlights;
