@@ -1,9 +1,9 @@
-import React from "react";
+// import React from "react";
 
-const Explore = () => {
-    return (
-        S
-    );
-}
+// const Explore = () => {
+//     return (
+//         S
+//     );
+// }
 
-export default Explore;
+// export default Explore;
