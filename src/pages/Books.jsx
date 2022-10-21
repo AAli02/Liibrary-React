@@ -5,20 +5,33 @@ function Books({ books: initialBooks }) {
   const [books, setBooks] = useState(initialBooks);
 
   function filterBooks(filter) {
-    console.log(filter);
     if (filter === "LOW_TO_HIGH") {
-      setBooks(books.slice().sort ((a, b) => 
-      (a.salePrice || a.originalPrice) - 
-      (b.salePrice || b.originalPrice)))
+      setBooks(
+        books
+          .slice()
+          .sort(
+            (a, b) =>
+              (a.salePrice || a.originalPrice) -
+              (b.salePrice || b.originalPrice)
+          )
+      );
     }
+
     if (filter === "HIGH_TO_LOW") {
-      setBooks(books.slice().sort ((a, b) => 
-      (b.salePrice || b.originalPrice) - 
-      (a.salePrice || a.originalPrice)))
+      setBooks(
+        books
+          .slice()
+          .sort(
+            (a, b) =>
+              (b.salePrice || b.originalPrice) -
+              (a.salePrice || a.originalPrice)
+          )
+      );
     }
+
     if (filter === "RATING") {
-        setBooks(books.slice().sort((a, b) => b.rating - a.rating));
-      }
+      setBooks(books.slice().sort((a, b) => b.rating - a.rating));
+    }
   }
 
   return (
