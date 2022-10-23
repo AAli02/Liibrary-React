@@ -1,6 +1,6 @@
-const Price = ( salePrice, originalPrice) => {
+function Price({ salePrice, originalPrice }) {
     return (
-        <div className="book__price">
+      <div className="book__price">
         {salePrice ? (
           <>
             <span className="book__price--normal">
@@ -13,7 +13,6 @@ const Price = ( salePrice, originalPrice) => {
         )}
       </div>
     );
-} 
-
-export default Price;
-
+  }
+  
+  export default Price;
