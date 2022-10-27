@@ -99,7 +99,7 @@ function Cart({ cart, changeQuantity, deleteItem }) {
                 </div>
                 <button
                   className="btn btn__checkout no-cursor"
-                  onClick={() => alert("Too lazy :p")}
+                  onClick={() => alert("Too lazy :)")}
                 >
                   Proceed to checkout
                 </button>
