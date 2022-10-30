@@ -1,22 +1,17 @@
-import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import LibraryLogo from "../assets/Library.svg";
 import { Link } from "react-router-dom";
 
-const Nav = ({ numberOfItems }) => {
-  function openMenu() {
-    document.body.classList += " menu--open";
-  }
-
-  function closeMenu() {
-    document.body.classList.remove("menu--open");
+function Nav({ numberCartItems }) {
+  function menuToggle() {
+    document.body.classList.toggle("menu--open");
   }
 
   return (
     <nav>
       <div className="nav__container">
         <Link to="/">
-          <img className="logo" src={LibraryLogo} alt="" />
+          <img src={LibraryLogo} alt="" className="logo" />
         </Link>
         <ul className="nav__links">
           <li className="nav__list">
@@ -25,40 +20,40 @@ const Nav = ({ numberOfItems }) => {
             </Link>
           </li>
           <li className="nav__list">
-            <Link to="/books" className="nav__link nav__link--primary">
+            <Link to="/books" className="nav__link">
               Books
             </Link>
           </li>
-          <button className="btn__menu" onClick={openMenu}>
+          <button className="btn__menu" onClick={menuToggle}>
             <FontAwesomeIcon icon="bars" />
           </button>
           <li className="nav__icon">
             <Link to="/cart" className="nav__link">
               <FontAwesomeIcon icon="shopping-cart" />
             </Link>
-            {numberOfItems > 0 && (
-              <span className="cart__length">{numberOfItems}</span>
+
+            {numberCartItems > 0 && (
+              <span className="cart__length">{numberCartItems}</span>
             )}
           </li>
         </ul>
-
         <div className="menu__backdrop">
-          <button className="btn__menu btn__menu--close" onClick={closeMenu}>
+          <button className="btn__menu btn__menu--close" onClick={menuToggle}>
             <FontAwesomeIcon icon="times" />
           </button>
           <ul className="menu__links">
             <li className="menu__list">
-              <Link to="/" className="menu__link" onClick={closeMenu}>
+              <Link to="/" className="menu__link" onClick={menuToggle}>
                 Home
               </Link>
             </li>
             <li className="menu__list">
-              <Link to="/books" className="menu__link" onClick={closeMenu}>
+              <Link to="/books" className="menu__link" onClick={menuToggle}>
                 Books
               </Link>
             </li>
             <li className="menu__list">
-              <Link to="/cart" className="menu__link" onClick={closeMenu}>
+              <Link to="/cart" className="menu__link" onClick={menuToggle}>
                 Cart
               </Link>
             </li>
@@ -67,6 +62,6 @@ const Nav = ({ numberOfItems }) => {
       </div>
     </nav>
   );
-};
+}
 
 export default Nav;
