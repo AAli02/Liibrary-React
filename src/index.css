@@ -174,13 +174,9 @@ button:active {
   width: 100vw;
   height: 100vh;
   z-index: 100;
-  display: flex;
+  display: none;
   align-items: center;
   justify-content: center;
-  visibility: hidden;
-  transition: all 300ms ease;
-  opacity: 0;
-  transform: translate(100%);
 }
 
 .menu--open {
@@ -226,7 +222,6 @@ LANDING
 
 #landing {
   background-color: #bfe6ff7d;
-
 }
 
 header {
