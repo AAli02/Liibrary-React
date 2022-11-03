@@ -776,6 +776,10 @@ select {
     padding: 0 24px;
   }
 
+  html, body {
+    overscroll-behavior-y: none;
+  }
+
   h1 {
     font-size: 40px;
   }
