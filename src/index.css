@@ -17,14 +17,9 @@ html {
   scroll-behavior: smooth;
 }
 
-html, body {
-  overscroll-behavior-y: none;
-  overscroll-behavior-x: none;
-}
 
 body {
   max-width: 100vw;
-  overflow-x: hidden;
 }
 
 nav {
@@ -51,8 +46,6 @@ a {
 a:hover {
   text-decoration: underline;
 }
-
-
 
 ul {
   display: flex;
@@ -777,10 +770,6 @@ select {
 
 /* SMALL PHONES, TABLETS, LARGE SMARTPHONES */
 @media (max-width: 768px) {
-
-  html, body {
-    overscroll-behavior-x: none;
-  }
 
   .header__description {
     padding: 0 24px;
